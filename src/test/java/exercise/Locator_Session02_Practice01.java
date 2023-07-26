@@ -42,14 +42,18 @@ public class Locator_Session02_Practice01 {
         Assert.assertTrue(checkDisplay.isDisplayed());
 
         WebElement menuPim = driver.findElement(By.xpath("//a[contains(@href,'viewPimModule')]"));
+
+       // menuPim.click();
+       // System.out.println(menuPim.getCssValue("name"));
+        // tại sao sau khi click rồi thì get attribute và cssvalue lại bị lỗi nhỉ
+
         System.out.println(menuPim.getAttribute("class"));
         if (menuPim.getAttribute("class").contains("active")) {
             System.out.println("yes");
-//            WebElement btnAddImployee = driver.findElement(By.xpath("//a[text()='Add Employee']"));
-//            btnAddImployee.click();
+            WebElement btnAddImployee = driver.findElement(By.xpath("//a[text()='Add Employee']"));
+            btnAddImployee.click();
 
         } else {
-//
             menuPim.click();
             Thread.sleep(3000);
             WebElement btnAddImployee = driver.findElement(By.xpath("//a[text()='Add Employee']"));
