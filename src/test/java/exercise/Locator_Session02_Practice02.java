@@ -19,10 +19,10 @@ public class Locator_Session02_Practice02 {
     //Fill information: Name, Email, Website, Expertise, Education, Comment
     String name = "chung";
     String email = "chungnt@vmogroup.com";
-    String website = "";
+    String website = "https://www.globalsqa.com/samplepagetest/";
     String experience = "1-3";
 
-    String comment = "Very goood";
+    String comment = "Very goood\nThank you";
 
     @BeforeMethod
     public void setup() {
@@ -81,7 +81,10 @@ public class Locator_Session02_Practice02 {
 
 
         WebElement actualComment = driver.findElement(By.xpath("//p[contains(text(),'Comment')]"));
-        Assert.assertTrue(actualComment.getText().contains(comment.replace("\n"," ")));
+        System.out.println(comment.replace("\n"," "));
+        System.out.println("Actual: "+ actualComment.getText());
+
+        Assert.assertTrue(actualComment.getText().contains(comment));
 
     }
 
