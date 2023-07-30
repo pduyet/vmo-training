@@ -33,9 +33,11 @@ public class Locator_Session03_Homework03 {
         driver.findElement(By.xpath("//a[contains(text(),'Sign in')]")).click();
         email = generateEmail();
         driver.findElement(By.xpath("//input[@id='email_create']")).sendKeys(email);
+        driver.findElement(By.xpath("//label[@for='email_create']")).click();
         WebElement isValidate = driver.findElement(By.xpath("//input[@id='email_create']/parent::div"));
-        driver.findElement(By.xpath("//button[@id='SubmitCreate']")).click();
         Assert.assertTrue(isValidate.getAttribute("class").contains("form-ok"));
+        driver.findElement(By.xpath("//button[@id='SubmitCreate']")).click();
+
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@id='uniform-id_gender2']//input")).click();
         driver.findElement(By.xpath("//label[@for='customer_firstname']/following-sibling::input")).sendKeys(firstName);
@@ -58,7 +60,6 @@ public class Locator_Session03_Homework03 {
         selectYear.click();
         dateOfBirth = date + "-" + month + "-" + year;
         System.out.println(dateOfBirth);
-
 
         WebElement validateFirstname = driver.findElement(By.xpath("//label[@for='customer_firstname']/parent::div"));
         Assert.assertTrue(validateFirstname.getAttribute("class").contains("form-ok"));
