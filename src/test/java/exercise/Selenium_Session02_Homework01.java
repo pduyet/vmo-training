@@ -74,8 +74,8 @@ public class Selenium_Session02_Homework01 {
         Assert.assertEquals(textboxSearch.getText(),titleSecondArticle);
       //  driver.findElement(By.xpath("//p[@id='searchinput']//following-sibling::a")).click();
     }
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 }
