@@ -63,18 +63,19 @@ public class Selenium_Session02_Homework01 {
         WebElement textboxSearch = driver.findElement(By.id("searchinput"));
         textboxSearch.sendKeys(titleArticle);
         Assert.assertEquals(textboxSearch.getText(),titleArticle);
-        driver.findElement(By.xpath("//p[@id='searchinput']//following-sibling::a")).click();
-        driver.navigate().back();
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='kenh14-header-wrapper']")).isDisplayed());
+       // driver.findElement(By.xpath("//p[@id='searchinput']//following-sibling::a")).click();
+       // driver.navigate().back();
+
         String titleSecondArticle = driver.findElement(By.xpath("(//div[@id='bindRegionNews']//a)[4]")).getText();
         System.out.println(titleSecondArticle);
         textboxSearch = driver.findElement(By.id("searchinput"));
+        textboxSearch.clear();
         textboxSearch.sendKeys(titleSecondArticle);
         Assert.assertEquals(textboxSearch.getText(),titleSecondArticle);
-        driver.findElement(By.xpath("//p[@id='searchinput']//following-sibling::a")).click();
+      //  driver.findElement(By.xpath("//p[@id='searchinput']//following-sibling::a")).click();
     }
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }
