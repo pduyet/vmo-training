@@ -71,8 +71,8 @@ public class Selenium_Session03_Homework {
 
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 }
