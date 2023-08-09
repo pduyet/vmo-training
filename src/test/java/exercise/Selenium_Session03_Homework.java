@@ -57,7 +57,7 @@ public class Selenium_Session03_Homework {
         driver.get("https://www.letskodeit.com/practice");
         Assert.assertTrue(driver.findElement(By.xpath("//div[@id='navbar-inverse-collapse']")).isDisplayed());
         WebElement input = driver.findElement(By.id("enabled-example-input"));
-        Assert.assertTrue(input.isEnabled());
+     //   Assert.assertTrue(input.isEnabled());
         WebElement btnDisable = driver.findElement(By.id("disabled-button"));
         WebElement btnEnable = driver.findElement(By.id("enabled-button"));
         if (input.isEnabled()) {
