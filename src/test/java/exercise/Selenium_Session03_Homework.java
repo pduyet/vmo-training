@@ -28,9 +28,12 @@ public class Selenium_Session03_Homework {
         Assert.assertTrue(checkboxBMW.isSelected());
         WebElement checkboxBenz = driver.findElement(By.id("benzcheck"));
         checkboxBenz.click();
+        Assert.assertTrue(checkboxBMW.isSelected()); // option bmw van duoc chon
         Assert.assertTrue(checkboxBenz.isSelected());
+
         checkboxBMW.click();
-        Assert.assertFalse(checkboxBMW.isSelected());
+        Assert.assertFalse(checkboxBMW.isSelected()); // option bmw ko duoc chon
+        Assert.assertTrue(checkboxBenz.isSelected()); // option benz van duoc chon
     }
     @Test
     public void TC02_HandleRadiobutton(){
@@ -42,8 +45,10 @@ public class Selenium_Session03_Homework {
         WebElement radiobtnBenz = driver.findElement(By.id("benzradio"));
         radiobtnBenz.click();
         Assert.assertTrue(radiobtnBenz.isSelected());
+        Assert.assertFalse(radiobtnHonda.isSelected());
         radiobtnHonda.click();
         Assert.assertTrue(radiobtnHonda.isSelected());
+        Assert.assertFalse(radiobtnBenz.isSelected());
         radiobtnHonda.click();
         Assert.assertTrue(radiobtnHonda.isSelected());
     }
@@ -66,8 +71,8 @@ public class Selenium_Session03_Homework {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }
