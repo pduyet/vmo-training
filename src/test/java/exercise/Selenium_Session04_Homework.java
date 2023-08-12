@@ -103,11 +103,6 @@ public class Selenium_Session04_Homework {
 
     }
 
-    public void closeWindowByTitle(String title) {
-        if (driver.getTitle().equals(title)) {
-
-        }
-    }
 
     public void switchWindowByTitle(String title) {
         Set<String> allWindows = driver.getWindowHandles();
@@ -120,8 +115,8 @@ public class Selenium_Session04_Homework {
     }
 
 
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 }
