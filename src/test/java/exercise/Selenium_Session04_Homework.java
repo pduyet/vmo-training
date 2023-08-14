@@ -20,9 +20,7 @@ public class Selenium_Session04_Homework {
     @BeforeMethod
     public void setup() {
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
-
     }
 
     @Test
@@ -66,6 +64,7 @@ public class Selenium_Session04_Homework {
         articleIn1stPage.click();
         String nextPage = "Cambridge Dictionary on Twitter: \"@kryes Thank you for raising this with us. We’ve passed the information on to our editors for review";
         switchWindowByTitle(nextPage);
+
         Thread.sleep(2000);
         Assert.assertTrue(driver.getTitle().contains(nextPage));
         WebElement articleIn2ndPage = driver.findElement(By.xpath("//div[@data-testid='tweetText']/span"));
