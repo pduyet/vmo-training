@@ -55,9 +55,10 @@ public class UserInteraction {
         driver.get("https://kenh14.vn/");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
-        Thread.sleep(5000);
+        Thread.sleep(9000);
         WebElement article = driver.findElement(By.xpath("(//div[@class='kenh14-body-wrapper']//a)[1]"));
         js.executeScript("arguments[0].scrollIntoView(true);",article);
+        article.click();
 
     }
 //    @AfterMethod
