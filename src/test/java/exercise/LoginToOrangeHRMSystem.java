@@ -31,8 +31,8 @@ public class LoginToOrangeHRMSystem {
         btnLogin.click();
 
     }
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown(){
+//        driver.quit();
+//    }
 }
