@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Testing Google Apps">
-    <test name="suite1">
-        <parameter name="browser" value="chorme"/>
-        <parameter name="Test01" value="admin"/>
+<suite name="Testing">
+    <test name="HW01">
         <classes>
+            <class name="Exercise.Topic02_LocatorSession01"/>
+            <class name="Exercise.Topic02_LocatorSession02"/>
+            <class name="Exercise.Topic02_LocatorSession03"/>
             <class name="Exercise.Topic03_SeleniumSession01"/>
+            <class name="Exercise.Topic03_SeleniumSession02"/>
+            <class name="Exercise.Topic03_SeleniumSession03"/>
+            <class name="Exercise.Topic04_IframeWindowTab"/>
+            <class name="Exercise.Topic05_UserInteraction"/>
+            <class name="Exercise.Topic06_Wait"/>
         </classes>
     </test> <!-- Test -->
+
+    <test name="hw02">
+        <parameter name ="Username" value="Admin1"/>
+        <parameter name ="Password" value="admin1231"/>
+
+    </test> <!-- Test -->
+
 </suite> <!-- Suite -->

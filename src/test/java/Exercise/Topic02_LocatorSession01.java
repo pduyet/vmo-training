@@ -20,7 +20,6 @@ public class Topic02_LocatorSession01 {
     }
     @Test
     public void TC01_SearchComputer() throws InterruptedException {
-        driver = new ChromeDriver();
         driver.get("https://demo.nopcommerce.com/");
 
         Assert.assertEquals(driver.getTitle(),"nopCommerce demo store");
@@ -33,14 +32,12 @@ public class Topic02_LocatorSession01 {
     }
     @Test
     public void TC02_LoginToOrangeHRMSystem()throws InterruptedException {
-        driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
         Assert.assertEquals(driver.getTitle(),"OrangeHRM");
-
-        WebElement Username = driver.findElement(By.name("username"));
-        Username.click();
-        Username.sendKeys("Admin");
+        Thread.sleep(50000);
+        WebElement userName = driver.findElement(By.name("username"));
+        userName.click();
+        userName.sendKeys("Admin");
         WebElement Password = driver.findElement(By.name("password"));
         Password.click();
         Password.sendKeys("admin123");
@@ -49,7 +46,6 @@ public class Topic02_LocatorSession01 {
     }
     @Test
     public void TC03_LoginAndLogoutToZeroWebApp() {
-        driver = new ChromeDriver();
         driver.get("http://zero.webappsecurity.com/");
         driver.manage().window().maximize();
 

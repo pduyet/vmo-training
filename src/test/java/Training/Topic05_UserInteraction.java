@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Topic09_UserInteraction {
+public class Topic05_UserInteraction {
     WebDriver driver;
     @BeforeMethod
     public void setup() {
