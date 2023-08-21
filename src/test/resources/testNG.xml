@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing TestNG">
+<!--    <test name="suite 1">-->
+<!--        <classes>-->
+<!--            <class name="exercise.Topic01_LocatorSession01"/>-->
+<!--            <class name="exercise.Topic02_LocatorSession02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="suite 2">
+        <classes>
+            <class name="exercise.Topic03_LocatorSession03">
+                <methods>
+                    <include name="CreateANewCustomer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
