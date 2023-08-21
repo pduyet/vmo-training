@@ -10,12 +10,14 @@ public class Topic11_Wait02 {
 
     @BeforeMethod
     public void setUp(){
+        // hh
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     @AfterMethod
     public void tearDown(){
+
         driver.quit();
     }
 }
