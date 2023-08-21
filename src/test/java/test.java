@@ -20,7 +20,7 @@ public class test {
     }
 
     @Test
-    public void b2() {
+    public void nestedIframe() {
         String url = "https://the-internet.herokuapp.com/nested_frames";
         driver.get(url);
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
