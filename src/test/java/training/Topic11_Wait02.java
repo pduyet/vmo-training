@@ -10,7 +10,7 @@ public class Topic11_Wait02 {
 
     @BeforeMethod
     public void setUp(){
-        // hh
+        // Testing
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
