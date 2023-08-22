@@ -35,8 +35,8 @@ public class Topic06_Wait {
         Assert.assertEquals(s, url);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nav[@class='navbar']/descendant::span[text()='Khách sạn']")));
         driver.findElement(By.xpath("//nav[@class='navbar']/descendant::span[text()='Khách sạn']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='ant-input-suffix']/preceding-sibling::input")));
-        driver.findElement(By.xpath("//span[@class='ant-input-suffix']/preceding-sibling::input")).sendKeys("Jw marriot");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@placeholder='Nhập điểm đến, khách sạn'])[1]")));
+        driver.findElement(By.xpath("(//input[@placeholder='Nhập điểm đến, khách sạn'])[1]")).sendKeys("Jw marriot");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='suggestDefault__title']")));
         driver.findElement(By.xpath("//p[text()='JW Marriott Hanoi']")).click();
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary ant-btn-lg w100']")).click();
@@ -49,10 +49,10 @@ public class Topic06_Wait {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary btn_orange']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//h2[text()='THÔNG TIN THANH TOÁN']")).isDisplayed());
         driver.findElement(By.xpath("//label[@for='payment_method_bank_transfer_new']")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='ant-spin-container ant-spin-blur']")));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='ant-spin-container ant-spin-blur']")));
+        js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//button[@class='btn btn_orange']")));
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//button[@class='btn btn_orange']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//p[text()='Giao dịch đang được xác nhận']")).isDisplayed());
         driver.findElement(By.xpath("//a[@class='btn btn_orange']")).click();
