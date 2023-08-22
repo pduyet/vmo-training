@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Testing">
+    <parameter name="Username" value="Parameter"/>
+    <parameter name="Password" value="password"/>
     <test name="HW01">
         <classes>
             <class name="Exercise.Topic02_LocatorSession01"/>
@@ -12,13 +14,8 @@
             <class name="Exercise.Topic04_IframeWindowTab"/>
             <class name="Exercise.Topic05_UserInteraction"/>
             <class name="Exercise.Topic06_Wait"/>
+            <class name="Exercise.Topic07_Exercise11_TestNG"/>
         </classes>
-    </test> <!-- Test -->
-
-    <test name="hw02">
-        <parameter name ="Username" value="Admin1"/>
-        <parameter name ="Password" value="admin1231"/>
-
-    </test> <!-- Test -->
-
+    </test>
+    !-- Test -->
 </suite> <!-- Suite -->
