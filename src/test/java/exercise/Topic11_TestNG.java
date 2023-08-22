@@ -2,6 +2,7 @@ package exercise;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
@@ -26,15 +27,23 @@ public class Topic11_TestNG {
 
     @Test(groups= {"LoginTest"})
     @Parameters ({"userName","password"})
-    public void TC02_LoginUnsuccessfulWithIncorrectUserOrPass(String userName, String password){
-        driver.findElement(By.xpath("//input[@name='username']")).sendKeys(userName);
-        driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
+    public void TC02_LoginUnsuccessfulWithIncorrectUserOrPass(@Optional String userName, @Optional String password){
+        WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
+        user.clear();
+        user.sendKeys(userName);
+        WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
+        pass.clear();
+        pass.sendKeys(password);
     }
 
     @Test (dataProvider = "dataProvider",groups= {"LoginTest"})
     public void TC03_LoginUnsuccessfulWithBlankUserOrPass(String userName, String password){
-        driver.findElement(By.xpath("//input[@name='username']")).sendKeys(userName);
-        driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
+        WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
+        user.clear();
+        user.sendKeys(userName);
+        WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
+        pass.clear();
+        pass.sendKeys(password);
     }
 
     @DataProvider(name = "dataProvider")
