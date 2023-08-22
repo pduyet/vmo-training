@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Home work 01">
+    <test name="suite 1">
+        <groups>
+            <run>
+                <include name="LoginTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="exercise.Topic11_TestNG">
+                <methods>
+                    <include name="TC01_LoginSuccessful"/>
+                </methods>
+            </class>
+            <class name="exercise.Topic11_TestNG">
+                <parameter name="userName" value="admin"/>
+                <parameter name="password" value="admin123"/>
+                <methods>
+                    <include name="TC02_LoginUnsuccessfulWithIncorrectUserOrPass"/>
+                </methods>
+            </class>
+            <class name="exercise.Topic11_TestNG">
+                <parameter name="userName" value="Admin"/>
+                <parameter name="password" value="Admin123"/>
+                <methods>
+                    <include name="TC02_LoginUnsuccessfulWithIncorrectUserOrPass"/>
+                </methods>
+            </class>
+            <class name="exercise.Topic11_TestNG">
+                <methods>
+                    <include name="TC03_LoginUnsuccessfulWithBlankUserOrPass"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
