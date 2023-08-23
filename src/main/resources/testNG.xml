@@ -5,6 +5,15 @@
         <parameter name="username" value="admin"></parameter>
         <parameter name="password" value="invalidPassword"></parameter>
         <classes>
+<!--            <class name="Topic01_Locator.Topic02_B01_Homework"/>-->
+<!--            <class name="Topic01_Locator.Topic02_B02_Homework"/>-->
+<!--            <class name="Topic01_Locator.Topic02_B03_Homework"/>-->
+<!--            <class name="Topic02_SeleniumAPICommands.Topic02_B01_Homework"/>-->
+<!--            <class name="Topic03.Topic03_B01_Homework"/>-->
+<!--            <class name="Topic03.Topic03_B02_Homework"/>-->
+<!--            <class name="Topic04.Topic04_B01_Homework"/>-->
+<!--            <class name="Topic05.Topic05_B01_Homework"/>-->
+<!--            <class name="Topic06_SeleniumWait.Topic06_B01_Homework"/>-->
             <class name="Topic07.Topic07_B01_Homework"/>
         </classes>
     </test> <!-- Test -->
