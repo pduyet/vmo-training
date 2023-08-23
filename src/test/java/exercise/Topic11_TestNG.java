@@ -1,13 +1,15 @@
 package exercise;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 
+import javax.swing.*;
 import java.time.Duration;
-
 public class Topic11_TestNG {
     WebDriver driver;
 
@@ -27,23 +29,27 @@ public class Topic11_TestNG {
 
     @Test(groups= {"LoginTest"})
     @Parameters ({"userName","password"})
-    public void TC02_LoginUnsuccessfulWithIncorrectUserOrPass(@Optional String userName, @Optional String password){
+    public void TC02_LoginUnsuccessfulWithIncorrectUserOrPass(@Optional String userName, @Optional String password) throws InterruptedException {
         WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
-        user.clear();
+        user.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
         user.sendKeys(userName);
+        Thread.sleep(3000);
         WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
-        pass.clear();
+        pass.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
         pass.sendKeys(password);
+        Thread.sleep(3000);
     }
 
     @Test (dataProvider = "dataProvider",groups= {"LoginTest"})
-    public void TC03_LoginUnsuccessfulWithBlankUserOrPass(String userName, String password){
+    public void TC03_LoginUnsuccessfulWithBlankUserOrPass(String userName, String password) throws InterruptedException {
         WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
-        user.clear();
+        user.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
         user.sendKeys(userName);
+        Thread.sleep(3000);
         WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
-        pass.clear();
+        pass.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
         pass.sendKeys(password);
+        Thread.sleep(3000);
     }
 
     @DataProvider(name = "dataProvider")
