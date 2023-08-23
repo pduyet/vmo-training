@@ -34,7 +34,6 @@ public class Locator_Session03_Homework04 {
     String emailCustomer;
     String passwordCustomer;
 
-
     @BeforeMethod
     public void setup() {
         driver = new ChromeDriver();

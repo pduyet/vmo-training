@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing auto">
+
+    <test name="suite 2">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="role" value="admin"></parameter>
+        <classes>
+            <class name="training.Topic07_TestNG"/>
+        </classes>
+    </test><!-- Test -->
+</suite> <!-- Suite -->
