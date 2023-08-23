@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing auto" >
+    <!--Homework 2-->
+    <test name="Homework 2">
+        <parameter name="username" value="admin123" />
+        <parameter name="password" value="admin12312" />
+        <classes>
+            <class name="exercise.Topic07TestNGHw2"/>
+        </classes>
+    </test><!-- Test -->
+</suite> <!-- Suite -->

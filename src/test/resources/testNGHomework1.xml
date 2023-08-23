@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Homework1">
+    <!--Homework 1-->
+    <test name="Homework 1">
+        <classes>
+            <class name="exercise.Exercise05_Selenium"/>
+            <class name="exercise.Locator_Session02_Practice01"/>
+            <class name="exercise.Locator_Session02_Practice02"/>
+            <class name="exercise.Locator_Session03_Homework03"/>
+            <class name="exercise.Locator_Session03_Homework04"/>
+            <class name="exercise.LoginAndLogoutZeroWebApp"/>
+            <class name="exercise.LoginToOrangeHRMSystem"/>
+            <class name="exercise.SearchComputer"/>
+            <class name="exercise.Selenium_Session03_Homework"/>
+            <class name="exercise.Selenium_Session02_Homework01"/>
+            <class name="exercise.Selenium_Session04_Homework"/>
+            <class name="exercise.Topic06_Wait_Excercise10"/>
+            <class name="exercise.Unit09_UserInteraction"/>
+        </classes>
+    </test><!-- Test -->
+</suite> <!-- Suite -->
